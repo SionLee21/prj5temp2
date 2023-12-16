@@ -17,7 +17,7 @@ CREATE TABLE Board (
 
 CRUD 쿼리문
 데이터 추가   insert into BOARD (id, pw, nickname, productName, price, description, location, image_url, registration_date,prod_condtion) values ('제목','홍길동','내용');
-데이터 수정   update BOARD set title='제목2', content='내용' where seq=10
+데이터 수정
 데이터 삭제   delete from BOARD  where seq=10
 데이터 목록
 select * from BOARD  order by regdate desc
@@ -33,4 +33,4 @@ create table MEMBER (
     primary key(seq)
 )
 
-insert into member (userid, username, password) values ('admin', ‘관리자’,password(‘1234’) );
+insert MEMBER (userid, username, password) values ('admin', ‘관리자’,password(‘1234’) );
