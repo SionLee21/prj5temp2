@@ -16,15 +16,33 @@
 	<input type="hidden" name="seq" value="${boardVO.seq}">
 	<input type="hidden" name="oldfilename" value="${boardVO.image}">
 	<div class="mb-3 row">
-		<label for="imagefile" class="col-sm-2 col-form-label">Image</label>
+		<label for="image_url" class="col-sm-2 col-form-label">Image</label>
 		<div class="col-sm-10">
-			<input class="form-control" type="file" id="imagefile" name="imagefile">
+			<input class="form-control" type="file" id="image_url" name="image_url">
 		</div>
 	</div>
 	<div class="mb-3 row">
 		<label for="nickname" class="col-sm-2 col-form-label">Nickname</label>
 		<div class="col-sm-10">
 			<input type="text" class="form-control-plaintext" id="nickname" name="nickname" readonly value="${boardVO.nickname}">
+		</div>
+	</div>
+	<div class="mb-3 row">
+		<label for="content" class="col-sm-2 col-form-label">Content</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
+		</div>
+	</div>
+	<div class="mb-3 row">
+		<label for="content" class="col-sm-2 col-form-label">Content</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
+		</div>
+	</div>
+	<div class="mb-3 row">
+		<label for="content" class="col-sm-2 col-form-label">Content</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
 		</div>
 	</div>
 	<div class="mb-3 row">

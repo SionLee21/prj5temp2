@@ -36,11 +36,10 @@
                             <div class="card-header">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span>${u.nickname}</span>
-                                    <span class="text-secondary">${u.ip}</span>
                                 </div>
                             </div>
                             <%-- ${pageContext.request.contextPath} --%>
-                            <img src="${u.getImage()}" class="card-img" alt="!!THERE IS NO IMAGE!!">
+                            <img src="${u.getImage_url()}" class="card-img" alt="!!THERE IS NO IMAGE!!">
 
 
                             <div class="card-body">
@@ -52,9 +51,8 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <p class="card-text">${u.content}</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">${u.regdate}</small>
+                                    <small class="text-muted">${u.registration_date}</small>
                                     <div class="btn-group">
                                         <button type="button" class="btn btn-sm btn-outline-success" onclick="javascript:edit_ok('${u.getSeq()}')">수정</button>
                                         <button type="button" class="btn btn-sm btn-outline-danger" onclick="javascript:delete_ok('${u.getSeq()}')">삭제</button>
