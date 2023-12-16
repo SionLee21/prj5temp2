@@ -14,7 +14,16 @@ public class BoardVO {
     private String image_url;
     private Date registration_date;
     private String condition;
+    private String nickname;
     private int likecount;
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
 
     public String getProductName() {
         return productName;

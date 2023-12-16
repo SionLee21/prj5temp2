@@ -4,8 +4,8 @@
 
     <insert id="insertBoard">
         <![CDATA[
-        INSERT INTO Board (productName, price, category, location, description, seller_id, image_url, registration_date, product_condition)
-        VALUES (#{productName}, #{price}, #{category}, #{location}, #{description}, #{sellerId}, #{imageUrl}, #{registrationDate}, #{condition})
+        INSERT INTO Board (productName, price, category, nickname, location, description, seller_id, image_url, registration_date, product_condition)
+        VALUES (#{productName}, #{price}, #{category}, #{nickname} #{location}, #{description}, #{sellerId}, #{imageUrl}, #{registrationDate}, #{condition})
         ]]>
     </insert>
 

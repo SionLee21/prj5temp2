@@ -34,6 +34,7 @@ public class FileUpload {
             // edit이면 아래 무시
             if(multipartRequest.getParameter("pw") != null){
                 one.setPw(multipartRequest.getParameter("pw"));
+                one.setNickname(multipartRequest.getParameter("nickname"));
             }
 
 
