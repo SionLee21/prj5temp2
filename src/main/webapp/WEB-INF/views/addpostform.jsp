@@ -9,7 +9,7 @@
     <title>Write Post</title>
 </head>
 <body>
-<h1 class="text-center">Write Post</h1>
+<h1 class="text-center">중고거래 글쓰기</h1>
 <form class="w-50 m-auto" action="addok" method="post" enctype="multipart/form-data">
 
     <div class="mb-3 row">

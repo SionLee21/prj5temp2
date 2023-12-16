@@ -71,9 +71,23 @@ public class BoardController {
         vo = upload.uploadPhoto(request);
 
         System.out.println("Will update image to :" + vo.getImage_url());
+        //vo출력
+
 
         int i = boardService.updateBoard(vo);
         if(i == 0){
+            System.out.println("BoardVO Data:");
+            System.out.println("Seq: " + vo.getSeq());
+            System.out.println("Product Name: " + vo.getProductName());
+            System.out.println("Price: " + vo.getPrice());
+            System.out.println("Description: " + vo.getDescription());
+            System.out.println("PW: " + vo.getPw());
+            System.out.println("Location: " + vo.getLocation());
+            System.out.println("Seller ID: " + vo.getSeller_id());
+            System.out.println("Image URL: " + vo.getImage_url());
+            System.out.println("Condition: " + vo.getProd_condition());
+            System.out.println("Nickname: " + vo.getNickname());
+            System.out.println("Like Count: " + vo.getLikecount());
             System.out.println("데이터 수정 성공!");
         } else {
             System.out.println("데이터 수정 실패.");

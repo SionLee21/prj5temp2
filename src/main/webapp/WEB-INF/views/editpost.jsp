@@ -1,6 +1,6 @@
 <%@ page isELIgnored="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+		 pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
@@ -11,54 +11,62 @@
 	<title>Edit Post</title>
 </head>
 <body>
-<h1 class="text-center">Edit Post</h1>
+<h1 class="text-center">중고거래 글 수정</h1>
 <form class="w-50 m-auto" method="post" action="../editok" enctype="multipart/form-data">
 	<input type="hidden" name="seq" value="${boardVO.seq}">
-	<input type="hidden" name="oldfilename" value="${boardVO.image}">
+	<input type="hidden" name="oldfilename" value="${boardVO.image_url}">
+
+	<div class="mb-3 row">
+		<label for="productName" class="col-sm-2 col-form-label">Product Name</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="productName" name="productName" value="${boardVO.productName}">
+		</div>
+	</div>
+
+	<div class="mb-3 row">
+		<label for="price" class="col-sm-2 col-form-label">Price</label>
+		<div class="col-sm-10">
+			<input type="number" class="form-control" id="price" name="price" value="${boardVO.price}">
+		</div>
+	</div>
+
+	<div class="mb-3 row">
+		<label for="description" class="col-sm-2 col-form-label">Description</label>
+		<div class="col-sm-10">
+			<textarea class="form-control" id="description" name="description" rows="3">${boardVO.description}</textarea>
+		</div>
+	</div>
+
+	<div class="mb-3 row">
+		<label for="location" class="col-sm-2 col-form-label">Location</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="location" name="location" value="${boardVO.location}">
+		</div>
+	</div>
+
 	<div class="mb-3 row">
 		<label for="image_url" class="col-sm-2 col-form-label">Image</label>
 		<div class="col-sm-10">
 			<input class="form-control" type="file" id="image_url" name="image_url">
 		</div>
 	</div>
+
 	<div class="mb-3 row">
-		<label for="nickname" class="col-sm-2 col-form-label">Nickname</label>
+		<label class="col-sm-2 col-form-label">Condition:</label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control-plaintext" id="nickname" name="nickname" readonly value="${boardVO.nickname}">
+			<input type="radio" id="conditionGood" name="condition" value="좋음" ${boardVO.condition == '좋음' ? 'checked' : ''}><label for="conditionGood">좋음</label>
+			<input type="radio" id="conditionNormal" name="condition" value="보통" ${boardVO.condition == '보통' ? 'checked' : ''}><label for="conditionNormal">보통</label>
+			<input type="radio" id="conditionBad" name="condition" value="나쁨" ${boardVO.condition == '나쁨' ? 'checked' : ''}><label for="conditionBad">나쁨</label>
 		</div>
 	</div>
-	<div class="mb-3 row">
-		<label for="content" class="col-sm-2 col-form-label">Content</label>
-		<div class="col-sm-10">
-			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
-		</div>
-	</div>
-	<div class="mb-3 row">
-		<label for="content" class="col-sm-2 col-form-label">Content</label>
-		<div class="col-sm-10">
-			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
-		</div>
-	</div>
-	<div class="mb-3 row">
-		<label for="content" class="col-sm-2 col-form-label">Content</label>
-		<div class="col-sm-10">
-			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
-		</div>
-	</div>
-	<div class="mb-3 row">
-		<label for="content" class="col-sm-2 col-form-label">Content</label>
-		<div class="col-sm-10">
-			<textarea class="form-control" id="content" name="content" rows="3">${boardVO.content}</textarea>
-		</div>
-	</div>
+
 	<div class="text-center">
 		<input type="button" value="Back" onclick="history.back()" class="btn btn-secondary">
 		<button type="submit" class="btn btn-primary">Edit post</button>
 	</div>
 </form>
-
 </body>
 </html>
 <script>
-
+	// JavaScript code if needed
 </script>

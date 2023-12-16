@@ -9,17 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de27ef90-9b0d-4e5b-929b-5d13804bff8a" name="Changes" comment="update login image">
+    <list default="true" id="de27ef90-9b0d-4e5b-929b-5d13804bff8a" name="Changes" comment="많은 업뎃">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/board/BoardVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/util/FileUpload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/util/FileUpload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SqlQuery" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SqlQuery" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/board-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/board-mapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/addpostform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editpost.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/editpost.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +88,26 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.82">
+  <component name="RunManager" selected="Tomcat 서버.Tomcat 9.0.82">
     <configuration name="All in prj5temp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="prj5temp" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="prj5temp 2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="prj5temp 2" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -297,7 +308,7 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in prj5temp" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.82" />
+      <item itemvalue="Tomcat 서버.Tomcat 9.0.82" />
     </list>
     <recent_temporary>
       <list>
@@ -319,7 +330,8 @@
       <workItem from="1702705405155" duration="6378000" />
       <workItem from="1702713574051" duration="6992000" />
       <workItem from="1702722797874" duration="5124000" />
-      <workItem from="1702728092001" duration="292000" />
+      <workItem from="1702728092001" duration="3390000" />
+      <workItem from="1702735790177" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="update list">
       <option name="closed" value="true" />
@@ -337,7 +349,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702722267749</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="많은 업뎃">
+      <option name="closed" value="true" />
+      <created>1702728550981</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702728550981</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +366,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update list" />
     <MESSAGE value="update login image" />
-    <option name="LAST_COMMIT_MESSAGE" value="update login image" />
+    <MESSAGE value="많은 업뎃" />
+    <option name="LAST_COMMIT_MESSAGE" value="많은 업뎃" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/prj5temp$sTomcat_9_0_82.ic" NAME="sTomcat 9.0.82 Coverage Results" MODIFIED="1702713590988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

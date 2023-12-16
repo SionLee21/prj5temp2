@@ -53,12 +53,7 @@
                                     </button>
                                 </div>
                                 <div class="me-auto">${u.price}원</div>
-                                <c:if test="${u.condition != null}">
-                                    <small class="text-dark">Condition: ${u.condition}</small>
-                                </c:if>
-                                <c:if test="${u.condition == null}">
-                                    <small class="text-dark">Condition: Not specified</small>
-                                </c:if>
+                                <div class="text-dark">Condition:${u.prod_condition}</div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">${u.registration_date}</small>
                                     <div class="btn-group">
