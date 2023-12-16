@@ -23,19 +23,22 @@ public class FileUpload {
             MultipartRequest multipartRequest = new MultipartRequest(
                     request, realPath, sizeLimit, "utf-8", new DefaultFileRenamePolicy()
             );
+            String seq = multipartRequest.getParameter("seq");
+            if(seq!=null&&!seq.equals("")) one.setSeq(Integer.parseInt(seq));
 
             filename = request.getContextPath() + "/img/" + multipartRequest.getFilesystemName("image_url");
 
             // Extracting data from the form and setting it to BoardVO
-            one.setSeller_id(multipartRequest.getParameter("seller_id"));
-            one.setPw(multipartRequest.getParameter("pw"));
-            one.setNickname(multipartRequest.getParameter("nickname"));
+            if(multipartRequest.getParameter("seller_id") != null){
+                one.setSeller_id(multipartRequest.getParameter("seller_id"));
+                one.setPw(multipartRequest.getParameter("pw"));
+                one.setNickname(multipartRequest.getParameter("nickname"));
+            }
             one.setProductName(multipartRequest.getParameter("productName"));
             one.setDescription(multipartRequest.getParameter("description"));
             one.setLocation(multipartRequest.getParameter("location"));
             one.setImage_url(filename);
             one.setProd_condition(multipartRequest.getParameter("prod_condition"));
-
             // Parsing and setting price if available
             String priceStr = multipartRequest.getParameter("price");
             if (priceStr != null && !priceStr.isEmpty()) {
