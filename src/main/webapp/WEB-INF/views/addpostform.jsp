@@ -72,9 +72,9 @@
     <div class="mb-3 row">
         <label class="col-sm-2 col-form-label">Condition:</label>
         <div class="col-sm-10">
-            <input type="radio" id="conditionGood" name="condition" value="좋음"><label for="conditionGood">좋음</label>
-            <input type="radio" id="conditionNormal" name="condition" value="보통"><label for="conditionNormal">보통</label>
-            <input type="radio" id="conditionBad" name="condition" value="나쁨"><label for="conditionBad">나쁨</label>
+            <input type="radio" id="conditionGood" name="prod_condition" value="좋음"><label for="conditionGood">좋음</label>
+            <input type="radio" id="conditionNormal" name="prod_condition" value="보통"><label for="conditionNormal">보통</label>
+            <input type="radio" id="conditionBad" name="prod_condition" value="나쁨"><label for="conditionBad">나쁨</label>
         </div>
     </div>
 
