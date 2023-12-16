@@ -6,68 +6,70 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Potato market</title>
+    <title>Potato Market</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .card-body {
+            padding: 15px;
+        }
+        .product-info {
+            margin-bottom: 10px;
+        }
+        .product-info span {
+            font-weight: bold;
+        }
+        .love-button {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <main>
     <section class="py-5 text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">감자마켓</h1>
-                <p class="lead text-muted">Final Project</p>
+                <h1 class="fw-light">감자 마켓</h1>
+                <p class="lead text-muted">Discover and buy amazing things!</p>
                 <p>
-                    <a href="add" class="btn btn-primary my-2">내 물건 팔기</a>
+                    <a href="add" class="btn btn-primary my-2">중고거래 글 쓰기</a>
                 </p>
             </div>
         </div>
     </section>
 
-    <div class="py-5 bg-light">
-        <div class="container">
-            <c:forEach items="${list}" var="u">
-
-                <div class="row row-cols-3 g-3">
-                    <div class="col mx-auto">
-                        <div class="card shadow-sm">
-                            <div class="card-header">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <!-- 왼쪽: 제품명 -->
-                                    <span>${u.productName}</span>
-
-                                    <!-- 오른쪽: 별명 -->
-                                    <span>${u.nickname}</span>
-                                </div>
-
-                            </div>
-                            <img src="${pageContext.request.contextPath}/uploads/${u.image_url}" class="card-img" alt="!!THERE IS NO IMAGE!!">
-
-                            <div class="card-body">
-                                <div class="d-flex justify-content-end align-items-center">
-                                    <div class="me-auto p-2">${u.description}</div>
-                                    <span class="px-2" id="loveNum${u.seq}">${u.likecount}</span>
-                                    <button type="button" class="btn btn-outline-danger" onclick="javascript:love('${u.seq}')">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="me-auto">${u.price}원</div>
-                                <div class="text-dark">Condition:${u.prod_condition}</div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">${u.registration_date}</small>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-success" onclick="javascript:edit_ok('${u.seq}')">수정</button>
-                                        <button type="button" class="btn btn-sm btn-outline-danger" onclick="javascript:delete_ok('${u.seq}')">삭제</button>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="container">
+        <c:forEach items="${list}" var="u">
+            <div class="card mb-3">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span class="product-name">${u.productName}</span>
+                    <span class="seller-name">${u.nickname}</span>
+                </div>
+                <div class="card-body">
+                    <img src="${pageContext.request.contextPath}/uploads/${u.image_url}" class="card-img-top mb-3" alt="Product Image">
+                    <p class="product-info"><span>Description:</span> ${u.description}</p>
+                    <p class="product-info"><span>Price:</span> ${u.price}원</p>
+                    <p class="product-info"><span>Condition:</span> ${u.prod_condition}</p>
+                    <p class="product-info"><span>Location:</span> ${u.location}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">${u.registration_date}</small>
+                        <div>
+                            <span id="loveNum${u.seq}" class="px-2">${u.likecount}</span>
+                            <span class="love-button" onclick="javascript:love('${u.seq}')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                                    </svg>
+                                </span>
+                            <button type="button" class="btn btn-sm btn-outline-success" onclick="javascript:edit_ok('${u.seq}')">Edit</button>
+                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="javascript:delete_ok('${u.seq}')">Delete</button>
                         </div>
                     </div>
                 </div>
-                <br><br><br>
-            </c:forEach>
-        </div>
+            </div>
+        </c:forEach>
     </div>
 </main>
 
@@ -109,6 +111,5 @@
         xhttp.send();
     }
 </script>
-
 </body>
 </html>
