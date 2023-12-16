@@ -25,6 +25,10 @@
         .love-button {
             cursor: pointer;
         }
+        .card-img-top {
+            width: 300px; /* 이미지 너비 설정 */
+            height: auto; /* 이미지 높이 자동 조절 */
+        }
     </style>
 </head>
 <body>
@@ -101,15 +105,29 @@
     }
 
     function love(seq) {
+        console.log("love function called with seq: " + seq); // 함수 호출 로그
+
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("loveNum" + seq).innerHTML = this.responseText;
+            console.log("Ready state changed: " + this.readyState); // 상태 변경 로그
+
+            if (this.readyState == 4) {
+                console.log("Response received with status: " + this.status); // 응답 상태 로그
+
+                if (this.status == 200) {
+                    console.log("Updating like count to: " + this.responseText); // 좋아요 숫자 업데이트 로그
+                    document.getElementById("loveNum" + seq).innerHTML = this.responseText;
+                } else {
+                    console.error("Error in request: " + this.statusText); // 오류 로그
+                }
             }
         };
+
         xhttp.open("GET", "like?q=" + seq, true);
         xhttp.send();
+        console.log("Request sent for seq: " + seq); // 요청 전송 로그
     }
+
 </script>
 </body>
 </html>

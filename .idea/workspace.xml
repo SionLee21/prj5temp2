@@ -9,29 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de27ef90-9b0d-4e5b-929b-5d13804bff8a" name="Changes" comment="많은 업뎃">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/스크린샷 2023-12-06 오후 11.08.06.png" afterDir="false" />
+    <list default="true" id="de27ef90-9b0d-4e5b-929b-5d13804bff8a" name="Changes" comment="update seq in FileUpload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,25 +45,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/ision/Downloads/prj5temp 2/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "아티팩트",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "spring.configuration.checksum": "0212c724e5b143bdd9d9b61e602b8781",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ision/Downloads/prj5temp 2/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;아티팩트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;0212c724e5b143bdd9d9b61e602b8781&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -103,7 +83,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat 서버.Tomcat 9.0.82">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.82">
     <configuration name="All in prj5temp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="prj5temp" />
       <option name="PACKAGE_NAME" value="" />
@@ -325,7 +305,7 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in prj5temp" />
-      <item itemvalue="Tomcat 서버.Tomcat 9.0.82" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.82" />
     </list>
     <recent_temporary>
       <list>
@@ -349,6 +329,7 @@
       <workItem from="1702722797874" duration="5124000" />
       <workItem from="1702728092001" duration="3390000" />
       <workItem from="1702735790177" duration="2979000" />
+      <workItem from="1702744038986" duration="1572000" />
     </task>
     <task id="LOCAL-00001" summary="update list">
       <option name="closed" value="true" />
@@ -374,7 +355,31 @@
       <option name="project" value="LOCAL" />
       <updated>1702728550981</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update login UI">
+      <option name="closed" value="true" />
+      <created>1702740276263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702740276263</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update query">
+      <option name="closed" value="true" />
+      <created>1702740299072</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702740299072</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update seq in FileUpload">
+      <option name="closed" value="true" />
+      <created>1702742266253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702742266253</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +389,11 @@
     <MESSAGE value="update list" />
     <MESSAGE value="update login image" />
     <MESSAGE value="많은 업뎃" />
-    <option name="LAST_COMMIT_MESSAGE" value="많은 업뎃" />
+    <MESSAGE value="update UI" />
+    <MESSAGE value="update login UI" />
+    <MESSAGE value="update query" />
+    <MESSAGE value="update seq in FileUpload" />
+    <option name="LAST_COMMIT_MESSAGE" value="update seq in FileUpload" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/prj5temp$sTomcat_9_0_82.ic" NAME="sTomcat 9.0.82 Coverage Results" MODIFIED="1702713590988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
