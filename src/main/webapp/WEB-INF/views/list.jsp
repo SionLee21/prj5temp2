@@ -49,7 +49,7 @@
                     <span class="seller-name">${u.nickname}</span>
                 </div>
                 <div class="card-body">
-                    <img src="${pageContext.request.contextPath}/uploads/${u.image_url}" class="card-img-top mb-3" alt="Product Image">
+                    <img src="${u.image_url}" class="card-img-top mb-3" alt="Product Image">
                     <p class="product-info"><span>Description:</span> ${u.description}</p>
                     <p class="product-info"><span>Price:</span> ${u.price}원</p>
                     <p class="product-info"><span>Condition:</span> ${u.prod_condition}</p>

@@ -9,7 +9,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de27ef90-9b0d-4e5b-929b-5d13804bff8a" name="Changes" comment="많은 업뎃" />
+    <list default="true" id="de27ef90-9b0d-4e5b-929b-5d13804bff8a" name="Changes" comment="많은 업뎃">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/스크린샷 2023-12-06 오후 11.08.06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/iyeeun/Desktop/prj5temp2",
+    "last_opened_file_path": "/Users/ision/Downloads/prj5temp 2/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,11 +86,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resource/img" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.util" />
@@ -79,7 +103,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.82">
+  <component name="RunManager" selected="Tomcat 서버.Tomcat 9.0.82">
     <configuration name="All in prj5temp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="prj5temp" />
       <option name="PACKAGE_NAME" value="" />
@@ -114,6 +138,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="b07be01e-4629-4d0f-b794-f38dd15a6d22" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -299,7 +325,7 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in prj5temp" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.82" />
+      <item itemvalue="Tomcat 서버.Tomcat 9.0.82" />
     </list>
     <recent_temporary>
       <list>
@@ -322,7 +348,7 @@
       <workItem from="1702713574051" duration="6992000" />
       <workItem from="1702722797874" duration="5124000" />
       <workItem from="1702728092001" duration="3390000" />
-      <workItem from="1702735790177" duration="1400000" />
+      <workItem from="1702735790177" duration="2979000" />
     </task>
     <task id="LOCAL-00001" summary="update list">
       <option name="closed" value="true" />
