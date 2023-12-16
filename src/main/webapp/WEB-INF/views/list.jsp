@@ -78,7 +78,7 @@
         </p>
         <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-dark">Creators</h4>
-            <p class="text-muted">이예은 22200550<br>이시온 ?</p>
+            <p class="text-muted">이예은 22200550<br>이시온 22200538</p>
         </div>
     </div>
 </footer>

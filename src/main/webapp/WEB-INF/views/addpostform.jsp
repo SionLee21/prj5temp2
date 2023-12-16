@@ -1,23 +1,6 @@
 <%@ page isELIgnored="false" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%   String ip = request.getHeader("X-Forwarded-For");
-    if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-        ip = request.getHeader("Proxy-Client-IP");
-    }
-    if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-        ip = request.getHeader("WL-Proxy-Client-IP");
-    }
-    if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-        ip = request.getHeader("HTTP_CLIENT_IP");
-    }
-    if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-        ip = request.getHeader("HTTP_X_FORWARDED_FOR");
-    }
-    if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {
-        ip = request.getRemoteAddr();
-    }
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,12 +33,12 @@
     </div>
 
     <div class="mb-3 row">
-        <label for="content" class="col-sm-2 col-form-label">Content</label>
+        <label for="description" class="col-sm-2 col-form-label">상품 설명</label>
         <div class="col-sm-10">
-            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
         </div>
     </div>
-    <input type="hidden" name="ip" value="<%=ip%>">
+    <input type="hidden" name="regDate" value="<%= new java.text.SimpleDateFormat("yyyy-MM-dd").format(new java.util.Date()) %>">
     <div class="text-center">
         <input type="button" value="Back" onclick="history.back()" class="btn btn-secondary">
         <button type="submit" class="btn btn-primary">Add</button>
