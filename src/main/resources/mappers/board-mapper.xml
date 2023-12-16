@@ -4,17 +4,16 @@
 
     <insert id="insertBoard">
         <![CDATA[
-        INSERT INTO Board (productName, price, category, nickname, location, description, seller_id, image_url, registration_date, product_condition)
-        VALUES (#{productName}, #{price}, #{category}, #{nickname} #{location}, #{description}, #{sellerId}, #{imageUrl}, #{registrationDate}, #{condition})
+        INSERT INTO Board (id, pw, nickname, productName, price, description, location, image_url, prod_condition)
+        VALUES (#{seller_id}, #{pw}, #{nickname}, #{productName}, #{price}, #{description}, #{location}, #{image_url}, #{condition})
         ]]>
     </insert>
 
     <update id="updateBoard">
         <![CDATA[
         UPDATE Board
-        SET productName=#{productName}, price=#{price}, category=#{category}, location=#{location},
-            description=#{description}, seller_id=#{sellerId}, image_url=#{imageUrl},
-            registration_date=#{registrationDate}, product_condition=#{condition}
+        SET productName=#{productName}, price=#{price}, nickname=#{nickname}, location=#{location},
+            description=#{description}, image_url=#{image_url}, prod_condition=#{condition}
         WHERE seq=#{seq}
         ]]>
     </update>

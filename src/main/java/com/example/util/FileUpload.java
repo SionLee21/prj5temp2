@@ -1,71 +1,66 @@
 package com.example.util;
 
-
-import com.example.board.BoardDAO;
 import com.example.board.BoardVO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
-
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 
 public class FileUpload {
-    public BoardVO uploadPhoto(HttpServletRequest request){
+    public BoardVO uploadPhoto(HttpServletRequest request) {
         String filename = "";
-        int sizeLimit = 15 * 4096 * 4096;
+        int sizeLimit = 15 * 1024 * 1024; // 15MB
 
         String realPath = request.getServletContext().getRealPath("resource/img");
 
         File dir = new File(realPath);
-        if (!dir.exists()) dir.mkdirs();
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
 
-        BoardVO one = null;
-        MultipartRequest multipartRequest = null;
-        try{
-            multipartRequest = new MultipartRequest(request, realPath, sizeLimit, "utf-8", new DefaultFileRenamePolicy());
+        BoardVO one = new BoardVO();
+        try {
+            MultipartRequest multipartRequest = new MultipartRequest(
+                    request, realPath, sizeLimit, "utf-8", new DefaultFileRenamePolicy()
+            );
 
-            filename = request.getContextPath() + "/img/" + multipartRequest.getFilesystemName("imagefile");
-            System.out.println(filename);
+            filename = request.getContextPath() + "/img/" + multipartRequest.getFilesystemName("image_url");
 
-            one = new BoardVO();
-            String seq = multipartRequest.getParameter("seq");
-            if(seq!=null&&!seq.equals("")) one.setSeq(Integer.parseInt(seq));
-
-            // edit이면 아래 무시
-            if(multipartRequest.getParameter("pw") != null){
-                one.setPw(multipartRequest.getParameter("pw"));
-                one.setNickname(multipartRequest.getParameter("nickname"));
-            }
-
-
-            if(seq!=null&&!seq.equals("")){
-                BoardDAO dao = new BoardDAO();
-                String oldfilename = multipartRequest.getParameter("oldfilename");
-                if(filename != null && oldfilename != null){
-                    System.out.println("changed file to" + filename);
-                    FileUpload.deleteFile(request, oldfilename);
-                }
-                else if (filename == null && oldfilename!=null) {
-                    System.out.println("no need to change file name");
-                    filename = oldfilename;
-                }
-            }
-
+            // Extracting data from the form and setting it to BoardVO
+            one.setSeller_id(multipartRequest.getParameter("seller_id"));
+            one.setPw(multipartRequest.getParameter("pw"));
+            one.setNickname(multipartRequest.getParameter("nickname"));
+            one.setProductName(multipartRequest.getParameter("productName"));
+            one.setDescription(multipartRequest.getParameter("description"));
+            one.setLocation(multipartRequest.getParameter("location"));
             one.setImage_url(filename);
-            System.out.println("good");
-        } catch (Exception e){
+            one.setCondition(multipartRequest.getParameter("condition"));
+
+            // Parsing and setting price if available
+            String priceStr = multipartRequest.getParameter("price");
+            if (priceStr != null && !priceStr.isEmpty()) {
+                try {
+                    int price = Integer.parseInt(priceStr);
+                    one.setPrice(price); // Assuming BoardVO has a price field
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid price format: " + priceStr);
+                }
+            }
+
+        } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Error during file upload: " + e.getMessage());
         }
         return one;
     }
 
-    public static void deleteFile(HttpServletRequest request, String filename){
+    public static void deleteFile(HttpServletRequest request, String filename) {
         String filePath = request.getServletContext().getRealPath("resource/img");
-
         File f = new File(filePath + "/" + filename);
-        if( f.exists() ) f.delete();
-        else {
-            System.out.println("file does not exist");
+        if (f.exists()) {
+            f.delete();
+        } else {
+            System.out.println("File does not exist: " + filename);
         }
     }
 }

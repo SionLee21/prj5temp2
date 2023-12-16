@@ -16,6 +16,16 @@ public class BoardVO {
     private String condition;
     private String nickname;
     private int likecount;
+    private int price;
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
 
     public String getNickname() {
         return nickname;

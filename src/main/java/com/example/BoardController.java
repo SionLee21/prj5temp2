@@ -34,21 +34,21 @@ public class BoardController {
 
     @RequestMapping(value = "board/addok", method = RequestMethod.POST)
     public String addPostOk(HttpServletRequest request, Model model) {
-        try{
+        try {
             BoardVO vo;
             FileUpload upload = new FileUpload();
             vo = upload.uploadPhoto(request);
 
             int i = boardService.insertBoard(vo);
-
-            if(i == 0){
+            if (i == 0) {
                 System.out.println("데이터 추가 성공!");
             } else {
                 System.out.println("데이터 추가 실패.");
             }
         } catch (Exception e) {
-            model.addAttribute("errorlog", e.getStackTrace().toString());
-            return "errorlog";
+            e.printStackTrace(); // 콘솔에 예외 출력
+            model.addAttribute("errorlog", e.getMessage()); // 에러 메시지를 모델에 추가
+            return "errorlog"; // 에러 페이지로 리디렉션
         }
         return "redirect:list";
     }

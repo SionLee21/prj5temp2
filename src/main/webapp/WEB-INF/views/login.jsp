@@ -14,7 +14,7 @@
         }
 
         button {
-            background-color: blue;
+            background-color: #82c1f5;
             color: white;
             font-size: 15px
         }

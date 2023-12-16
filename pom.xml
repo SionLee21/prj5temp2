@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>Project5_final</artifactId>
+  <artifactId>prj5temp</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>Project5_final Maven Webapp</name>
@@ -102,7 +102,7 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>Project5_final</finalName>
+    <finalName>prj5temp</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
